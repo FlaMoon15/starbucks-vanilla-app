@@ -138,9 +138,9 @@ spyEls.forEach((spyEl) => {
   new ScrollMagic
   .Scene({
     triggerElement: spyEl,  // 보여짐 여부를 감시할 요소를 지정
-    triggerHook: .8,
+    triggerHook: .8,        // VIEW PORT 기준 0.8에 해당 (최상위: 0, 최하위: 1)
   })
-  .setClassToggle()
-  .addTo();
+  .setClassToggle(spyEl, 'show')
+  .addTo(new ScrollMagic.Controller());
 });
 /* ScrollMagic END */
