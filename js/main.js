@@ -20,6 +20,7 @@ searchInputEl.addEventListener('blur', () => {
 
 /* BADGE EVENT START */
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 
 /**
  * throttle은 lodash.js 사용
@@ -33,14 +34,30 @@ window.addEventListener('scroll', _.throttle(() => {
       opacity: 0,
       display: 'none',
     });
+    // to-top visible
+    gsap.to(toTopEl, .2, {
+      x: 0,
+    });
+
   } else { // Badge Visible
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block',
     });
+    // to-top hidden
+    gsap.to(toTopEl, .2, {
+      x: 100,
+    });
   }
 }, 300));
 /* BADGE EVENT END */
+
+// to-top event
+toTopEl.addEventListener('click', () => {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  });
+});
 
 
 /* FADE-IN START */
