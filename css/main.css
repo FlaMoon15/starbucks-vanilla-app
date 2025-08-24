@@ -370,7 +370,6 @@ header .badges .badge {
 .notice .notice-line .inner__right h2 {
   font-size: 17px;
   font-weight: 700;
-  margin-right: 10px;
 }
 .notice .notice-line .inner__right .toggle-promotion {
   width: 62px;
@@ -390,6 +389,9 @@ header .badges .badge {
   background-color: #f6f5ef;
   overflow: hidden;
   transition: height .4s;
+}
+.notice .promotion.hide {
+  height: 0;
 }
 .notice .promotion .swiper-container {
   width: calc(819px * 3 + 20px);

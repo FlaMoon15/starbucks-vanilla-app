@@ -87,3 +87,22 @@ new Swiper('.promotion .swiper-container', {
   }
 });
 /* Swiper END */
+
+
+/* PROMOTION START */
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+let isHidePromotion = false;
+
+// Promotion Toggle
+promotionToggleBtn.addEventListener('click', () => {
+  isHidePromotion = !isHidePromotion;
+  if (isHidePromotion) {
+    // Promotion Hide
+    promotionEl.classList.add('hide');
+  } else {
+    // Promotion Visible
+    promotionEl.classList.remove('hide');
+  }
+});
+/* PROMOTION END */
