@@ -42,3 +42,14 @@ window.addEventListener('scroll', _.throttle(() => {
   }
 }, 300));
 /* BADGE EVENT END */
+
+
+/* FADE-IN START */
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach((fadeEl, index) => {
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1) * .7,
+    opacity: 1,
+  });
+});
+/* FADE-IN END */
