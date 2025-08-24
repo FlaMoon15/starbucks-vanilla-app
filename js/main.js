@@ -27,7 +27,6 @@ const badgeEl = document.querySelector('header .badges');
  * GSAP 사용
  */
 window.addEventListener('scroll', _.throttle(() => {
-  console.log(window.scrollY);
   if (window.scrollY > 500) { // Badge Hidden
     // gsap.to(요소, 지속시간, 옵션)
     gsap.to(badgeEl, .6, {
@@ -84,6 +83,20 @@ new Swiper('.promotion .swiper-container', {
   navigation: {
     prevEl: '.promotion .swiper-prev',
     nextEl: '.promotion .swiper-next',
+  }
+});
+/**
+ *  awards
+ *  new Swiper(선택자, 옵션)
+ */
+new Swiper('.awards .swiper-container', {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next',
   }
 });
 /* Swiper END */
@@ -144,3 +157,8 @@ spyEls.forEach((spyEl) => {
   .addTo(new ScrollMagic.Controller());
 });
 /* ScrollMagic END */
+
+
+/* 연도 계산 */
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
