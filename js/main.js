@@ -41,5 +41,4 @@ window.addEventListener('scroll', _.throttle(() => {
     });
   }
 }, 300));
-
 /* BADGE EVENT END */
