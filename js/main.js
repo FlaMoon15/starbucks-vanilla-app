@@ -130,3 +130,17 @@ floatingObject('.floating1', 1, 15);
 floatingObject('.floating2', .5, 15);
 floatingObject('.floating3', 1.5, 20);
 /* floating image animaton END  */
+
+
+/* ScrollMagic START */
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach((spyEl) => {
+  new ScrollMagic
+  .Scene({
+    triggerElement: spyEl,  // 보여짐 여부를 감시할 요소를 지정
+    triggerHook: .8,
+  })
+  .setClassToggle()
+  .addTo();
+});
+/* ScrollMagic END */
