@@ -66,6 +66,7 @@ header .sub-menu ul.menu li::before {
   position: absolute;
   top: 0;
   bottom: 0;
+  margin: auto;
 }
 header .sub-menu ul.menu li:first-child:before {
   display: none;
@@ -85,7 +86,7 @@ header .sub-menu .search {
 }
 header .sub-menu .search input {
   width: 36px;
-  height: 34px;
+  height: 32px;
   padding: 4px 10px;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -105,6 +106,7 @@ header .sub-menu .search .material-icons {
   top: 0;
   bottom: 0;
   right: 5px;
+  margin: auto;
   transition: .4s;
 }
 header .sub-menu .search.focused .material-icons {
