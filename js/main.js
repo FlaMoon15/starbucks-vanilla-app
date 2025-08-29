@@ -126,7 +126,7 @@ function random(min, max) {
 }
 
 
-/* floating image animaton START */
+/* floating image animation START */
 function floatingObject(selector, delay, size) {
   gsap.to(selector, random(1.5, 2.5), {
     y: size,
@@ -139,7 +139,7 @@ function floatingObject(selector, delay, size) {
 floatingObject('.floating1', 1, 15);
 floatingObject('.floating2', .5, 15);
 floatingObject('.floating3', 1.5, 20);
-/* floating image animaton END  */
+/* floating image animation END  */
 
 
 /* ScrollMagic START */
